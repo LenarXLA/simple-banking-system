@@ -115,24 +115,16 @@ public class CardJDBC {
 
             try (PreparedStatement takeMoney = con.prepareStatement(upd)) {
 
-                // Create a savepoint
-                //Savepoint savepoint = con.setSavepoint(); // ????????????????????????????????????????????
-
                 takeMoney.setInt(1, Integer.parseInt(curCardNumBalance) - money);
                 takeMoney.setString(2, curCardNum);
 
                 takeMoney.executeUpdate();
-
 
                 PreparedStatement addMoney = con.prepareStatement(upd);
                 addMoney.setInt(1, Integer.parseInt(transferCardBalance) + money);
                 addMoney.setString(2, transferCard);
 
                 addMoney.executeUpdate();
-
-//                if (resultSet.getString(1).equals("Dearborn, Michigan")) {
-//                    con.rollback(savepoint);
-//                }
 
                 con.commit();
             }
