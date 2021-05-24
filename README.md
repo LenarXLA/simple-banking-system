@@ -7,3 +7,6 @@ In this project, i develop a simple banking system with database.
 # --------------------------------- #
 In this project, you will find out how the banking system works and learn about SQL.
 We'll also see how Luhn algorithm can help us avoid mistakes when entering the card number.
+
+
+![bank](https://user-images.githubusercontent.com/53114683/119341365-557b5c00-bc9c-11eb-89c9-8a1fb17950fb.jpg)
